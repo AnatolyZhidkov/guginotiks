@@ -1,0 +1,8 @@
+id;name;position;salary;project
+1;Ivan Petrov;cleaner;100;-
+2;Maria Ivanova;driver;120;-
+3;Alexey Smirnov;programmer;150;ProjectA
+4;Elena Volkova;tester;140;ProjectA
+5;Dmitry Sokolov;team_leader;200;ProjectA
+6;Olga Kuznetsova;project_manager;0; Ya Ponial kak eto
+7;Sergey Nikolaev;senior_manager;0;

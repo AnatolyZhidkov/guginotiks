@@ -1,0 +1,4 @@
+name;budget
+ProjectA;1000000.00
+Ivan;100.00
+Ia Ystal;1000000.00
