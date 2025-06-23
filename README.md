@@ -21,13 +21,20 @@ Employee (Базовый класс)
 │   ├── Cleaner (Уборщик)
 
 │   └── Driver (Водитель)
+
 ├── Engineer (Инженеры)
+
 │   ├── Programmer (Программист)
+
 │   ├── Tester (Тестировщик)
+
 │   └── TeamLeader (Лидер команды)
+
 └── Manager (Менеджеры)
-    ├── ProjectManager (Менеджер проекта)
-    └── SeniorManager (Старший менеджер)
+
+├── ProjectManager (Менеджер проекта)
+    
+└── SeniorManager (Старший менеджер)
 Интерфейсы:
 - WorkBaseTime: для почасовых расчетов
 - ProjectBudget: для работы с бюджетом проекта
