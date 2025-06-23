@@ -1,0 +1,8 @@
+id;name;position;salary;project
+1;Test Cleaner;cleaner;100;-
+2;Test Driver;driver;120;-
+3;Test Programmer;programmer;150;ProjectA
+4;Test Tester;tester;140;ProjectA
+5;Test TeamLeader;team_leader;200;ProjectA
+6;Test ProjManager;project_manager;0;ProjectA
+7;Test SeniorManager;senior_manager;0;-

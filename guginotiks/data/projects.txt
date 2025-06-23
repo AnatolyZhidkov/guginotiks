@@ -1,4 +1,6 @@
 name;budget
-ProjectA;1000000.00
-Ivan;100.00
-Ia Ystal;1000000.00
+ProjectA;1e+06
+Ivan;100
+Ia Ystal;1e+06
+gena;1e+08
+proverka;1.11111e+09

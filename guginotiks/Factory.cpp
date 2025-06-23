@@ -5,9 +5,9 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
+// Создает персонал из CSV-файла
 vector<Employee*> StaffFactory::makeStaff(const string& filename) {
     vector<Employee*> staff;
     ifstream file(filename);
@@ -17,23 +17,26 @@ vector<Employee*> StaffFactory::makeStaff(const string& filename) {
     }
 
     string line;
-    getline(file, line); // Skip header
+    getline(file, line); // Пропуск заголовока
 
     while (getline(file, line)) {
         istringstream iss(line);
         vector<string> tokens;
         string token;
 
+        // Разбитие строк по разделителю ';'
         while (getline(iss, token, ';')) {
             tokens.push_back(token);
         }
 
+        // Проверка корректности формата
         if (tokens.size() < 5) {
             cerr << "Warning: Invalid line format: " << line << endl;
             continue;
         }
 
         try {
+            // Парсим данные
             int id = stoi(tokens[0]);
             string name = tokens[1];
             string position = tokens[2];
@@ -42,6 +45,7 @@ vector<Employee*> StaffFactory::makeStaff(const string& filename) {
 
             Employee* emp = nullptr;
 
+            // Создание объектов в зависимости от должности
             if (position == "cleaner") {
                 emp = new Cleaner(id, name, position, project, salary);
             }
@@ -78,6 +82,7 @@ vector<Employee*> StaffFactory::makeStaff(const string& filename) {
     return staff;
 }
 
+// Сохранение данных о персонале в CSV-файл
 void StaffFactory::saveStaff(const string& filename,
     const vector<Employee*>& staff) {
     ofstream file(filename);
@@ -86,7 +91,10 @@ void StaffFactory::saveStaff(const string& filename,
         return;
     }
 
+    // Запись заголовока
     file << "id;name;position;salary;project\n";
+
+    // Запись данных по каждому сотруднику
     for (auto emp : staff) {
         file << emp->getId() << ";"
             << emp->getName() << ";"
