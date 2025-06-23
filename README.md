@@ -55,16 +55,25 @@ Employee (Базовый класс)
 Структура:
 data/
 ├── staff.txt          - Основной файл сотрудников
+
 ├── projects.txt       - Файл проектов
+
 └── staff_updated.txt  - Автосохранение при выходе
+
 Формат staff.txt:
 id;name;position;salary;project
+
 1;Ivan Petrov;cleaner;100;-
+
 2;Maria Ivanova;driver;120;-
+
 Формат projects.txt:
 name;budget
+
 ProjectA;1000000.00
+
 ProjectB;500000.00
+
 -----------------
 5. РАБОЧИЙ ПРОЦЕСС
 -----------------
